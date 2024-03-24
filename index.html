@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Of Ractangle </title>
+    <style>
+        body {
+            min-height: 100vh;
+            background-image:linear-gradient(to bottom, #cc66ff 0%, #99ffcc 100%);
+          
+        }
+
+        .name{
+            text-align: center;
+            color: #fff;
+          margin-top: 200px;
+
+        }
+
+        .container {
+            background-color: #fff;
+            width: 400px;
+            padding: 10px;
+            display: block;
+            border-radius: 10px;
+            margin: 50px auto;
+            
+           
+        }
+
+        .input {
+            width: 90%;
+            display: block;
+            margin: 40px auto;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+
+        .ans {
+            font-size: 20px;
+            text-align: center;
+         
+        }
+
+
+
+        .btn-calculate {
+           
+            background-image:  linear-gradient(to bottom, #cc66ff 0%, #33ecf2 100%);
+            color: #fff;
+            width: 150px;
+            padding: 5px 10px;
+            font-size: 25px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+        }
+
+        
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <h1 class="name">Area Of Ractangle </h1>
+
+   
+    <div class="container">
+        
+        <input type="text" placeholder="Enter The Length" class="input" id="length" />
+        <input type="text" placeholder="Enter The Width" class="input" id="width" />
+       
+        <p class="ans" id="answer"></p>
+
+        <div class="btn-container">
+            <button type="button" class="btn-calculate" onclick="calculate()">Calculate</button>
+            <button type="button" class="btn-calculate" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            const length = document.getElementById("length");
+            const width = document.getElementById("width");
+          
+
+            const answer = (parseInt(length.value) * parseInt(width.value));
+
+            const ans = document.getElementById("answer");
+
+            ans.innerText = `Answer: ${answer} `;
+        }
+
+        function reset() {
+            const amount = document.getElementById("length");
+            const rate = document.getElementById("width");
+
+            const ans = document.getElementById("answer");
+
+            amount.value = "";
+            rate.value = "";
+            time.value = "";
+
+            ans.innerText = "";
+        }
+
+    </script>
+
+</body>
+
+</html>
